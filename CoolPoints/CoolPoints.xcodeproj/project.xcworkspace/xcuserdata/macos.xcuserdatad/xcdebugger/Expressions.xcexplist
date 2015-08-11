@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "CoolPoints.SearchByViewController.(searchUsers (CoolPoints.SearchByViewController) -&gt; (Swift.String) -&gt; ()).(closure #1):SearchByViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CoolPoints.SearchByViewController.tableView (CoolPoints.SearchByViewController)(ObjectiveC.UITableView, cellForRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ObjectiveC.UITableViewCell:SearchByViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "arrUsers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "CoolPoints": {
+            "applicationId": "zV3SLjRTdoh2oVx1rpdu5SW4ONSJ3mkqmtM6Znzk", 
+            "masterKey": "wAKp9L1BIw994engKEHJZSZUMhetQ3kxOWxXIcU5"
+        }, 
+        "_default": {
+            "link": "CoolPoints"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.5"
+    }
+}
