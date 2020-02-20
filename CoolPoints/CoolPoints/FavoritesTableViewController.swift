@@ -2,8 +2,8 @@
 //  FavoritesTableViewController.swift
 //  CoolPoints
 //
-//  Created by matti on 2/25/15.
-//  Copyright (c) 2015 matti. All rights reserved.
+//  Created by tmaas510 on 2/25/15.
+//  Copyright (c) 2015 tmaas510. All rights reserved.
 //
 
 import UIKit
@@ -21,19 +21,19 @@ class FavoritesTableViewController: UITableViewController, FavoritesCellDelegate
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.loadContents()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("addFavObject:"), name: "MyLikedNotification", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("removeFavObject:"), name: "MyUnlikedNotification", object: nil)
+        NotificationCenterCenter.defaultCenter().addObserver(self, selector: Selector("addFavObject:"), name: "MyLikedNotification", object: nil)
+        NotificationCenterCenter.defaultCenter().addObserver(self, selector: Selector("removeFavObject:"), name: "MyUnlikedNotification", object: nil)
     
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let leftBarButtonItem1 = UIBarButtonItem(image: UIImage(named: "Add_Invite"), style: UIBarButtonItemStyle.Plain, target: self, action: Selector("btnAddInviteClicked"))
+        let leftBarButtonItem1 = UIBarButtonItem(image: UIImage(named: "Add_Invite"), UIBarButtonItem.StylemStyle.Plain, target: self, action: Selector("btnAddInviteClicked"))
         
-        let leftBarButtonItem2 = UIBarButtonItem(image: UIImage(named: "search"), style: UIBarButtonItemStyle.Plain, target: self, action: Selector("btnSearchClicked"))
+        let leftBarButtonItem2 = UIBarButtonItem(image: UIImage(named: "search"), UIBarButtonItem.StylemStyle.Plain, target: self, action: Selector("btnSearchClicked"))
         
-        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Group"), style: UIBarButtonItemStyle.Plain, target: self, action: Selector("btnGivePointsClicked"))
+        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Group"), sUIBarButtonItem.StylemStyle.Plain, target: self, action: Selector("btnGivePointsClicked"))
         
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
         self.navigationItem.leftBarButtonItems = [leftBarButtonItem1, leftBarButtonItem2]
@@ -46,7 +46,7 @@ class FavoritesTableViewController: UITableViewController, FavoritesCellDelegate
 //        println("add: \(notification.object)")
         if notification != nil {
             if notification.object != nil {
-                if notification.name == "MyLikedNotification" {
+                if notificatio.rawValuen.name == "MyLikedNotification" {
                     self.arrFavorites.insert(notification.object as PFObject, atIndex: 0)
                     self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Fade)
                 }

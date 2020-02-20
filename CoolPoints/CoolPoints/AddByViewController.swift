@@ -2,8 +2,8 @@
 //  AddByViewController.swift
 //  CoolPoints
 //
-//  Created by matti on 2/26/15.
-//  Copyright (c) 2015 matti. All rights reserved.
+//  Created by tmaas510 on 2/26/15.
+//  Copyright (c) 2015 tmaas510. All rights reserved.
 //
 
 import UIKit
@@ -86,10 +86,10 @@ class AddByViewController: UIViewController, UINavigationControllerDelegate, MFM
     }
     
     @IBAction func btnAddByTwitterClicked(sender: AnyObject) {
-        let user = PFUser.currentUser()
-        let userName = user["fullName"] as String
+        let user = PFUser.current()
+        let userName = user?["fullName"] as String
         /* ============ Share on Twitter ============ */
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
             var twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             twitterSheet.setInitialText("\(userName) has invited you to sign up for a free CoolPoints account. By following this link and entering the code below you will receive 150 FREE CoolPoints.\nURL\nRedemption Code = \(user.objectId)")
             self.presentViewController(twitterSheet, animated: true, completion: nil)
